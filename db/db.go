@@ -15,8 +15,6 @@ func InitDB() {
 	var err error
 
 	dsn := os.Getenv("postgresql://postgres:gjeNDhrVFJCWEXFmVwmWMoJGuWIJmkJN@shuttle.proxy.rlwy.net:36962/railway")
-
-	// DB, err = sql.Open("postgres", "user=postgres password=yash7807 dbname=Event_API host=localhost port=5432 sslmode=disable") //Setting Driver as an postgresql and metining path for the database with open method
 	DB, err = sql.Open("postgres", dsn)
 	if err != nil {
 		log.Fatal("Failed to open Database") //this method will exit the code if err is there
