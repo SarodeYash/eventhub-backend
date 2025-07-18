@@ -1,0 +1,12 @@
+PUT http://localhost:8080/event/update/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFeHBvIjoxNzUwNDAxMTA4LCJlbWFpbCI6Illhc2hfU2Fyb2RlIiwidXNlcl9pZCI6MX0.I40wViB9cnng3vVacXTGJ-KGeD7mONd3oMvgHeQ7UyI
+
+{
+ 
+"Name":"Music Show",
+"Description":"A Show By Arijith Singh",
+"Location":"Pune",
+"DateTime":"2025-07-12T15:24:00Z"
+
+}

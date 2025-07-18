@@ -1,0 +1,13 @@
+POST http://localhost:8080/event 
+ Content-Type: application/json
+ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFeHBvIjoxNzUwNTAwMjM1LCJlbWFpbCI6Illhc2hfUyIsInVzZXJfaWQiOjF9.tv4F1VEB0V1OBO10snJbxdKN8Vxxd57yth6QvaONhYU
+ 
+ {
+"Name":"Music Show",
+"Description":"A Test Event",
+"Location":"Pune",
+"DateTime":"2025-07-12T15:24:00Z"
+
+ }
+
+ //Used to Send Data to Server Side when server is active 
