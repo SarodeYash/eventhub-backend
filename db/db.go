@@ -3,6 +3,7 @@ package db
 import (
 	"database/sql"
 	"log"
+	"os"
 
 	_ "github.com/lib/pq"
 )
@@ -12,7 +13,11 @@ var DB *sql.DB //Setting handler for the SQL with sql pointer
 // Setting up the database Connection
 func InitDB() {
 	var err error
-	DB, err = sql.Open("postgres", "user=postgres password=yash7807 dbname=Event_API host=localhost port=5432 sslmode=disable") //Setting Driver as an postgresql and metining path for the database with open method
+
+	dsn := os.Getenv("postgresql://postgres:gjeNDhrVFJCWEXFmVwmWMoJGuWIJmkJN@shuttle.proxy.rlwy.net:36962/railway")
+
+	// DB, err = sql.Open("postgres", "user=postgres password=yash7807 dbname=Event_API host=localhost port=5432 sslmode=disable") //Setting Driver as an postgresql and metining path for the database with open method
+	DB, err = sql.Open("postgres", dsn)
 	if err != nil {
 		log.Fatal("Failed to open Database") //this method will exit the code if err is there
 	}
